@@ -20,10 +20,9 @@ namespace CaravanMVC.Controllers
         }
         [HttpPost]
         [Route("/wagons/{wagonId:int}/passengers")]
-        public IActionResult Create(int WagonId, Passenger passenger)
+        public IActionResult Create(int wagonId, Passenger passenger)
         {
-            var wagon = _context.Wagons.Include(w => w.Passengers).First(w => w.Id == WagonId);
-            passenger.Id = pId;
+            var wagon = _context.Wagons.Include(w => w.Passengers).First(w => w.Id == wagonId);
             passenger.Wagon = wagon;
             _context.Passengers.Add(passenger);
             //wagon.Passengers.Add(passenger);

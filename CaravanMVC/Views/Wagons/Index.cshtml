@@ -8,5 +8,7 @@ else{
     foreach(Wagon wagon in Model)
     {
         <p><a href="/wagons/@wagon.Id">@wagon.Name</a></p>
+        <p>@wagon.PassengerCount() Passengers with an average age of @wagon.AvgAge()</p>
+        <br />
     }
 }
