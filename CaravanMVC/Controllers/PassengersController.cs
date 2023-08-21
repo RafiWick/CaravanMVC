@@ -30,5 +30,11 @@ namespace CaravanMVC.Controllers
             _context.SaveChanges();
             return Redirect($"/wagons/{wagonId}");
         }
+        [Route("/passengerlist")]
+        public IActionResult Index()
+        {
+            var passengers = _context.Passengers.Include(p => p.Wagon).ToList();
+            return View(passengers);
+        }
     }
 }
