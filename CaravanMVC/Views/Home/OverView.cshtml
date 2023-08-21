@@ -1,0 +1,11 @@
+﻿@{
+    List<string> distinctDestinations = ViewData["DistinctDestinations"] as List<string>;
+    var averageAge = ViewData["AverageAge"] as int?;
+}
+
+<h1>OverView</h1>
+<h3>Average Age of Passengers: @averageAge</h3>
+<h2>All Destinations:</h2>
+@foreach(string destination in distinctDestinations){
+    <p>@destination</p>
+}
