@@ -10,6 +10,6 @@
 }
 <h2>Passengers</h2>
 @foreach(Passenger passenger in Model.Passengers){
-    <p>passenger.Name</p>
+    <p>@passenger.Name</p>
 }
 <a href="/wagons/@Model.Id/passengers/new">Add a new Passenger</a>
