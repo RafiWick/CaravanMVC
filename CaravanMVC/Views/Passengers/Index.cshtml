@@ -1,0 +1,5 @@
+﻿@model List<Passenger>
+<h1>Passenger List</h1>
+@foreach(Passenger passenger in Model){
+    <p>@passenger.Name: @passenger.Wagon.Name</p><br />
+}
